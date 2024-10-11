@@ -168,3 +168,61 @@ body {
     }
 }
 
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(135deg, #343a40, #007BFF);
+    border-bottom: 2px solid #6f42c1;
+}
+
+.navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFD700; /* Color dorado para destacar */
+}
+
+.navbar-brand:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.nav-link {
+    color: #FFD700;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #FFF;
+}
+
+.dropdown-menu {
+    background-color: #343a40;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+    color: #FFD700;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #6f42c1;
+    color: #FFF;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.7%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
