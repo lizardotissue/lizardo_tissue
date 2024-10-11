@@ -64,35 +64,43 @@
             </div>
         </section>
 
-      <!-- About Section -->
+    <!-- About Section -->
 <section id="about" class="content-section">
     <div class="container">
-        <h2>About Me</h2>
-        <button id="toggleAbout" class="btn">Read More</button>
-        <div id="aboutText" class="hidden">
-            <p>Welcome! I’m <strong>Lizardo Kendy Torres Ayala</strong>, a dedicated researcher with a strong foundation in <strong>Biomedical Engineering</strong> and <strong>Biomaterials Science</strong>. My work focuses on exploring the mechanical properties of biomaterials—such as their strength, elasticity, and durability—to understand their interactions with biological systems and optimize their use in medical applications.</p>
-            
-            <p>Throughout my career, I have contributed to the design of <strong>innovative medical devices</strong>, including a multifunctional wheelchair for children with cerebral palsy. I have also engaged in <strong>advanced bioprinting projects</strong>, such as the development of open-source bioprinting hardware. My research extends to <strong>optimizing surface modification techniques</strong> to enhance biomaterials' performance and adaptability in clinical settings.</p>
-            
-            <p>Beyond biomedical applications, my background in <strong>Materials Science and Engineering</strong> has ignited a strong interest in fields like <strong>archaeology and bioarchaeology</strong>, inspired by my roots in Cusco. I am particularly fascinated by applying modern materials science to study ancient artifacts and biological remains, uncovering new insights into the past. Additionally, I am committed to exploring <strong>sustainable material solutions</strong> that contribute to a more eco-friendly future.</p>
-            
-            <p>I am passionate about <strong>sharing knowledge and mentoring new researchers</strong>, especially in fostering growth in the scientific community of Latin America. If you share an interest in advancing materials science—whether in biomedicine, archaeology, or sustainability—<em>let's connect and explore new possibilities together.</em></p>
+        <h2 class="section-title">About Me</h2>
+        <div class="about-cards">
+            <div class="about-card">
+                <div class="icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <h3>Research Focus</h3>
+                <p>I specialize in <strong>Biomedical Engineering</strong> and <strong>Biomaterials Science</strong>, exploring the mechanical properties of biomaterials to optimize their use in medical applications. My work includes studying their <strong>strength, elasticity, and durability</strong>.</p>
+            </div>
+            <div class="about-card">
+                <div class="icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Innovative Projects</h3>
+                <p>Throughout my career, I've worked on developing <strong>innovative medical devices</strong> such as a multifunctional wheelchair for children with cerebral palsy and contributed to <strong>bioprinting</strong> with open-source hardware.</p>
+            </div>
+            <div class="about-card">
+                <div class="icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Beyond Biomedicine</h3>
+                <p>With roots in Cusco and a background in <strong>Materials Science</strong>, I have a passion for <strong>archaeology</strong> and <strong>bioarchaeology</strong>. I am keen to apply modern materials science to study ancient artifacts and sustainable solutions.</p>
+            </div>
+            <div class="about-card">
+                <div class="icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Mentorship & Knowledge Sharing</h3>
+                <p>I am committed to <strong>mentoring future scientists</strong> in Latin America, sharing knowledge and fostering growth in the scientific community. Let's connect if you share an interest in advancing materials science.</p>
+            </div>
         </div>
     </div>
-    <script>
-        document.getElementById('toggleAbout').addEventListener('click', function() {
-            const aboutText = document.getElementById('aboutText');
-            const btn = document.getElementById('toggleAbout');
-            if (aboutText.classList.contains('hidden')) {
-                aboutText.classList.remove('hidden');
-                btn.textContent = 'Show Less';
-            } else {
-                aboutText.classList.add('hidden');
-                btn.textContent = 'Read More';
-            }
-        });
-    </script>
 </section>
+
 
 
         <!-- Contact Section -->
