@@ -64,19 +64,36 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="content-section">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Welcome! I’m Lizardo Kendy Torres Ayala, a dedicated researcher with a strong foundation in Biomedical Engineering and Biomaterials Science. My work centers on exploring the mechanical properties of biomaterials—focusing on their strength, elasticity, and durability—to understand their interactions with biological systems and optimize their use in medical applications.
+      <!-- About Section -->
+<section id="about" class="content-section">
+    <div class="container">
+        <h2>About Me</h2>
+        <button id="toggleAbout" class="btn">Read More</button>
+        <div id="aboutText" class="hidden">
+            <p>Welcome! I’m <strong>Lizardo Kendy Torres Ayala</strong>, a dedicated researcher with a strong foundation in <strong>Biomedical Engineering</strong> and <strong>Biomaterials Science</strong>. My work focuses on exploring the mechanical properties of biomaterials—such as their strength, elasticity, and durability—to understand their interactions with biological systems and optimize their use in medical applications.</p>
+            
+            <p>Throughout my career, I have contributed to the design of <strong>innovative medical devices</strong>, including a multifunctional wheelchair for children with cerebral palsy. I have also engaged in <strong>advanced bioprinting projects</strong>, such as the development of open-source bioprinting hardware. My research extends to <strong>optimizing surface modification techniques</strong> to enhance biomaterials' performance and adaptability in clinical settings.</p>
+            
+            <p>Beyond biomedical applications, my background in <strong>Materials Science and Engineering</strong> has ignited a strong interest in fields like <strong>archaeology and bioarchaeology</strong>, inspired by my roots in Cusco. I am particularly fascinated by applying modern materials science to study ancient artifacts and biological remains, uncovering new insights into the past. Additionally, I am committed to exploring <strong>sustainable material solutions</strong> that contribute to a more eco-friendly future.</p>
+            
+            <p>I am passionate about <strong>sharing knowledge and mentoring new researchers</strong>, especially in fostering growth in the scientific community of Latin America. If you share an interest in advancing materials science—whether in biomedicine, archaeology, or sustainability—<em>let's connect and explore new possibilities together.</em></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('toggleAbout').addEventListener('click', function() {
+            const aboutText = document.getElementById('aboutText');
+            const btn = document.getElementById('toggleAbout');
+            if (aboutText.classList.contains('hidden')) {
+                aboutText.classList.remove('hidden');
+                btn.textContent = 'Show Less';
+            } else {
+                aboutText.classList.add('hidden');
+                btn.textContent = 'Read More';
+            }
+        });
+    </script>
+</section>
 
-Throughout my career, I have contributed to the design of innovative medical devices, such as a multifunctional wheelchair for children with cerebral palsy, and engaged in advanced bioprinting projects, including the development of open-source bioprinting hardware. My research also extends to optimizing surface modification techniques to enhance the adaptability and performance of biomaterials in clinical settings.
-
-Beyond biomedical applications, my background in Materials Science and Engineering has sparked a strong interest in fields such as archaeology and bioarchaeology, inspired by my roots in Cusco. I am particularly intrigued by the potential of applying modern materials science to study ancient artifacts and biological remains, aiming to uncover new insights into the past. Additionally, I am committed to exploring sustainable material solutions that contribute to a more eco-friendly future.
-
-I am passionate about sharing my knowledge and mentoring new researchers, with a particular focus on fostering growth in the scientific community of Latin America. If you share an interest in advancing materials science—whether in the realm of biomedicine, archaeology, or sustainability—let's connect and explore new possibilities together.</p>
-            </div>
-        </section>
 
         <!-- Contact Section -->
         <section id="contact" class="content-section bg-dark text-light">
