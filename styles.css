@@ -1,0 +1,41 @@
+/* styles.css */
+body {
+    background-color: #f4f4f4; /* Un gris muy claro */
+    color: #2c3e50; /* Un azul grisáceo para el texto */
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #34495e; /* Azul oscuro */
+}
+
+.navbar-brand, .nav-link {
+    color: #ecf0f1 !important; /* Blanco hueso */
+}
+
+.hero {
+    background-color: #ecf0f1; /* Blanco hueso */
+    color: #34495e; /* Azul oscuro */
+}
+
+.content-section {
+    background-color: #ffffff; /* Blanco */
+    color: #2c3e50; /* Azul grisáceo */
+}
+
+.content-section.bg-light {
+    background-color: #e9ecef; /* Gris muy claro */
+}
+
+.footer {
+    background-color: #34495e; /* Azul oscuro */
+    color: #ecf0f1; /* Blanco hueso */
+}
+
+a {
+    color: #2980b9; /* Azul brillante para enlaces */
+}
+
+a:hover {
+    color: #3498db; /* Azul más claro al pasar el mouse */
+}
