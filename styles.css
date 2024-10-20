@@ -181,17 +181,19 @@ body {
 #contact {
     padding: 60px 0;
     text-align: center;
-    background-color: #0050B3;
-    color: #fff;
+    background-color: #f0f2f5; /* Fondo claro */
+    color: #333;
 }
 
 #contact h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #0050B3;
 }
 
 #contact p {
     font-size: 1.1rem;
+    color: #555;
 }
 
 .social-links {
@@ -202,14 +204,14 @@ body {
 }
 
 .social-icon {
-    color: #fff;
+    color: #0050B3; /* Color azul oscuro */
     transition: transform 0.3s ease, color 0.3s ease;
-    font-size: 2.5rem;
+    font-size: 3rem; /* Tamaño aumentado */
 }
 
 .social-icon:hover {
     transform: scale(1.2);
-    color: #FFD700;
+    color: #FFD700; /* Cambia a dorado al pasar el cursor */
 }
 
 /* Footer Styles */
