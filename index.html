@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadatos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lizardo Tissue - Personal Page</title>
+    <title>Lizardo Torres - Personal Page</title>
+    <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos Personalizados -->
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome para Iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="d-flex flex-column min-vh-100">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="#">Lizardo Torres</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,24 +40,16 @@
                         </li>
                         <!-- Insights & Resources Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="notesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Insights & Resources
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notesDropdown">
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="resourcesDropdown">
                                 <li><a class="dropdown-item" href="https://your-note1.com" target="_blank">Personal Notes</a></li>
                                 <li><a class="dropdown-item" href="https://your-note2.com" target="_blank">Lectures & Talks</a></li>
                                 <li><a class="dropdown-item" href="https://your-note3.com" target="_blank">Scientific Resources</a></li>
-                            </ul>
-                        </li>
-                        <!-- Teaching & Outreach Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="teachingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Teaching & Outreach
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="teachingDropdown">
-                                <li><a class="dropdown-item" href="https://your-teaching-achievements.com" target="_blank">Teaching Achievements</a></li>
-                                <li><a class="dropdown-item" href="https://your-tutoring-projects.com" target="_blank">Tutoring Projects</a></li>
-                                <li><a class="dropdown-item" href="https://your-science-outreach.com" target="_blank">Science Outreach</a></li>
+                                <!-- Teaching & Outreach dentro de Insights & Resources -->
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="https://your-teaching-outreach.com" target="_blank">Teaching & Outreach</a></li>
                             </ul>
                         </li>
                         <!-- Get in Touch -->
@@ -69,11 +63,11 @@
 
         <!-- Hero Section -->
         <section class="hero d-flex align-items-center flex-grow-1">
-            <div class="container d-flex justify-content-between align-items-center">
+            <div class="container d-flex flex-wrap justify-content-between align-items-center">
                 <div class="hero-content fade-in-left">
                     <h1>Lizardo Kendy Torres Ayala</h1>
                     <p>Biomedical Engineer | MSc. in Materials Science and Engineering</p>
-                    <button class="btn btn-outline-light btn-lg mt-3 animate-btn">Learn More</button>
+                    <a href="#about" class="btn btn-custom btn-lg mt-3">Learn More</a>
                 </div>
                 <div class="hero-image fade-in-right">
                     <img src="Fotos/original_image.png" alt="Your Photo" class="hero-img">
@@ -86,28 +80,32 @@
             <div class="container">
                 <h2 class="section-title">About Me</h2>
                 <div class="about-cards">
-                    <div class="about-card" onmouseover="highlightCard(this)" onmouseout="resetCard(this)">
+                    <!-- Card 1 -->
+                    <div class="about-card">
                         <div class="icon">
                             <i class="fas fa-microscope"></i>
                         </div>
                         <h3>Research Focus</h3>
                         <p>I specialize in <strong>Biomedical Engineering</strong> and <span class="highlight">Biomaterials Science</span>, exploring the mechanical properties of biomaterials like their <span class="highlight">strength</span>, <span class="highlight">elasticity</span>, and <span class="highlight">durability</span>.</p>
                     </div>
-                    <div class="about-card" onmouseover="highlightCard(this)" onmouseout="resetCard(this)">
+                    <!-- Card 2 -->
+                    <div class="about-card">
                         <div class="icon">
                             <i class="fas fa-tools"></i>
                         </div>
                         <h3>Innovative Projects</h3>
                         <p>I've worked on <span class="highlight">innovative medical devices</span>, such as a multifunctional wheelchair for children with cerebral palsy, and advanced <strong>bioprinting</strong> projects, including open-source hardware.</p>
                     </div>
-                    <div class="about-card" onmouseover="highlightCard(this)" onmouseout="resetCard(this)">
+                    <!-- Card 3 -->
+                    <div class="about-card">
                         <div class="icon">
                             <i class="fas fa-globe"></i>
                         </div>
                         <h3>Beyond Biomedicine</h3>
-                        <p>With roots in <span class="highlight">Cusco</span> and a background in <strong>Materials Science</strong>, I am deeply interested in expanding my research into <span class="highlight">bioarchaeology</span> and <strong>sustainable materials</strong>. I am fascinated by the potential of using modern materials science to study <span class="highlight">ancient artifacts</span> and <span class="highlight">biological remains</span>, as well as developing <strong>eco-friendly materials</strong> from natural sources like those found in the Peruvian Amazon. My vision is to contribute to innovations that bridge the past and present for a more sustainable future.</p>
+                        <p>With roots in <span class="highlight">Cusco</span> and a background in <strong>Materials Science</strong>, I am deeply interested in expanding my research into <span class="highlight">bioarchaeology</span> and <strong>sustainable materials</strong>.</p>
                     </div>
-                    <div class="about-card" onmouseover="highlightCard(this)" onmouseout="resetCard(this)">
+                    <!-- Card 4 -->
+                    <div class="about-card">
                         <div class="icon">
                             <i class="fas fa-users"></i>
                         </div>
@@ -116,44 +114,30 @@
                     </div>
                 </div>
             </div>
-            <!-- Scripts para las tarjetas -->
-            <script>
-                function highlightCard(card) {
-                    card.style.background = "linear-gradient(135deg, #007BFF, #6f42c1)";
-                    card.style.color = "#fff";
-                    card.querySelectorAll('.highlight').forEach(el => el.style.color = "#FFD700");
-                }
-
-                function resetCard(card) {
-                    card.style.background = "#ffffff";
-                    card.style.color = "#555";
-                    card.querySelectorAll('.highlight').forEach(el => el.style.color = "#007BFF");
-                }
-            </script>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="content-section">
-            <div class="container text-center">
+            <div class="container">
                 <h2>Contact</h2>
                 <p>You can reach out to me through the following platforms:</p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="social-icon">
-                        <i class="fab fa-linkedin fa-2x"></i>
+                        <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://www.instagram.com/lizardokendy/profilecard/?igsh=bTZhbTg0ZzFnbzEx" target="_blank" class="social-icon">
-                        <i class="fab fa-instagram fa-2x"></i>
+                    <a href="https://www.instagram.com/lizardokendy/" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
                     </a>
                     <a href="https://orcid.org/0000-0002-4168-6665" target="_blank" class="social-icon">
-                        <i class="fab fa-orcid fa-2x"></i>
+                        <i class="fab fa-orcid"></i>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="footer mt-auto py-3">
-            <div class="container text-center">
+        <footer class="footer mt-auto">
+            <div class="container">
                 <p>&copy; 2024 Lizardo Torres. All rights reserved.</p>
             </div>
         </footer>
