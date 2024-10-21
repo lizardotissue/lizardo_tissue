@@ -1,60 +1,58 @@
 /* Estilos Globales */
 body {
-    background-color: #f0f2f5;
+    background-color: #f5f7fa;
     color: #333;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
-/* Navbar Styles */
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navbar */
 .navbar {
     padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, #0062E6, #33AEFF);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #0050B3;
 }
 
 .navbar .navbar-brand {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
     font-weight: bold;
     color: #fff;
-    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .navbar .navbar-brand:hover {
     color: #FFD700;
-    text-decoration: none;
-    transform: translateY(-3px);
 }
 
 .navbar .nav-link {
     color: #fff;
     padding: 0.5rem 1rem;
-    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .navbar .nav-link:hover {
     color: #FFD700;
-    transform: translateY(-3px);
 }
 
 .navbar .dropdown-menu {
-    background-color: #0062E6;
-    border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #0050B3;
 }
 
 .navbar .dropdown-item {
     color: #fff;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar .dropdown-item:hover {
-    background-color: #0050B3;
-    color: #FFD700;
+    background-color: #FFD700;
+    color: #0050B3;
 }
 
 .navbar-toggler {
@@ -66,37 +64,29 @@ body {
     filter: invert(1);
 }
 
-@media (max-width: 992px) {
-    .navbar-nav {
-        text-align: center;
-    }
-}
-
-/* Hero Section Styles (Home Page) */
+/* Hero Section (Página Principal) */
 .hero {
     background: linear-gradient(to right, #0050B3, #0062E6);
     color: #fff;
     padding: 100px 0;
 }
 
+.hero .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .hero .hero-content {
-    max-width: 50%;
+    flex: 1 1 50%;
+    padding-right: 2rem;
+    animation: fadeInLeft 1s forwards;
 }
 
 .hero .hero-image {
-    max-width: 40%;
-    transition: transform 0.3s ease;
-}
-
-.hero .hero-img {
-    width: 100%;
-    border-radius: 10px;
-    border: 4px solid #FFD700;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.hero .hero-img:hover {
-    transform: scale(1.05);
+    flex: 1 1 40%;
+    animation: fadeInRight 1s forwards;
 }
 
 .hero h1 {
@@ -109,112 +99,123 @@ body {
     color: #ddd;
 }
 
-.btn-custom {
-    border-color: #FFD700;
-    color: #FFD700;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-custom:hover {
+.hero .btn-custom {
     background-color: #FFD700;
     color: #0050B3;
+    border: none;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-/* About Section Styles */
+.hero .btn-custom:hover {
+    background-color: #ffcc00;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 10px;
+    border: 4px solid #FFD700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
 #about {
     padding: 4rem 0;
-    background: #fff;
+    background-color: #fff;
 }
 
 #about .section-title {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: #0050B3;
     font-weight: 700;
 }
 
 .about-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .about-card {
-    background: #f0f2f5;
+    background-color: #f5f7fa;
     border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem;
     text-align: center;
+    flex: 1 1 calc(25% - 2rem);
+    max-width: calc(25% - 2rem);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .about-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
 }
 
 .about-card .icon {
-    font-size: 2.5rem;
-    color: #0062E6;
+    font-size: 3rem;
+    color: #0050B3;
     margin-bottom: 1rem;
 }
 
 .about-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
     color: #0050B3;
+    margin-bottom: 1rem;
 }
 
 .about-card p {
-    font-size: 1rem;
     color: #555;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
 .about-card .highlight {
-    color: #0062E6;
+    color: #0050B3;
     font-weight: bold;
 }
 
-/* Contact Section Styles */
+/* Contact Section */
 #contact {
-    padding: 60px 0;
-    text-align: center;
+    padding: 4rem 0;
     background-color: #f0f2f5;
-    color: #333;
+    text-align: center;
 }
 
 #contact h2 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
     color: #0050B3;
+    margin-bottom: 1rem;
 }
 
 #contact p {
     font-size: 1.1rem;
     color: #555;
+    margin-bottom: 2rem;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
+    gap: 2rem;
 }
 
-.social-icon {
+.social-links a {
     color: #0050B3;
-    transition: transform 0.3s ease, color 0.3s ease;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-icon:hover {
-    transform: scale(1.2);
+.social-links a:hover {
     color: #FFD700;
+    transform: scale(1.2);
 }
 
-/* Footer Styles */
+/* Footer */
 .footer {
     background-color: #003D80;
     color: #ccc;
@@ -226,52 +227,86 @@ body {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .hero .hero-content,
-    .hero .hero-image {
-        max-width: 100%;
-    }
-    .about-cards {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Animations */
-.fade-in-left {
-    opacity: 0;
-    animation: fadeInLeft 1s forwards;
-}
-
-.fade-in-right {
-    opacity: 0;
-    animation: fadeInRight 1s forwards;
-}
-
+/* Animaciones */
 @keyframes fadeInLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
     from {
         opacity: 0;
         transform: translateX(-50px);
     }
-}
-
-@keyframes fadeInRight {
     to {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+@keyframes fadeInRight {
     from {
         opacity: 0;
         transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero .hero-content,
+    .hero .hero-image {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .hero .hero-content {
+        order: 2;
+        animation: fadeInUp 1s forwards;
+    }
+
+    .hero .hero-image {
+        order: 1;
+        margin-bottom: 2rem;
+        animation: fadeInDown 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .about-card {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
 
 /* --- SECCIÓN TEACHING & OUTREACH --- */
 .teaching-outreach {
-    /* Encapsula todos los estilos de esta sección */
+    /* Estilos específicos para Teaching & Outreach */
 }
 
 .teaching-outreach .hero-teaching {
@@ -315,82 +350,45 @@ body {
 
 .teaching-outreach .card {
     border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
 }
 
 .teaching-outreach .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
 }
 
-.teaching-outreach .card-img-top,
-.teaching-outreach .card .carousel-item img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 250px;
+.teaching-outreach .card-img-top {
+    height: 200px;
     object-fit: cover;
 }
 
-.teaching-outreach .reveal {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease;
-}
-
-.teaching-outreach .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.teaching-outreach .modal {
-    display: none;
-    position: fixed;
-    z-index: 1050;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8);
-}
-
-.teaching-outreach .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-.teaching-outreach .close {
-    position: absolute;
-    top: 50px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
+.teaching-outreach .card-title {
+    color: #0050B3;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
-.teaching-outreach .close:hover,
-.teaching-outreach .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+.teaching-outreach .card-text {
+    color: #555;
 }
 
-@media (max-width: 768px) {
-    .teaching-outreach .hero-teaching {
-        height: 200px;
-    }
-    .teaching-outreach .hero-teaching h1 {
-        font-size: 2rem;
-    }
+.teaching-outreach .btn-custom {
+    background-color: #0050B3;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.teaching-outreach .btn-custom:hover {
+    background-color: #FFD700;
+    color: #0050B3;
 }
 
 /* --- SECCIÓN PERSONAL NOTES --- */
 .personal-notes {
-    /* Encapsula todos los estilos de esta sección */
+    /* Estilos específicos para Personal Notes */
 }
 
 .personal-notes .hero-personal-notes {
@@ -406,7 +404,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 80, 179, 0.7);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .personal-notes .hero-personal-notes .container {
@@ -416,22 +414,28 @@ body {
 
 .personal-notes .hero-personal-notes h1 {
     font-size: 3rem;
-    color: #fff;
+    color: #FFD700;
 }
 
 .personal-notes .hero-personal-notes p {
-    color: #eee;
+    color: #fff;
     font-size: 1.2rem;
+}
+
+.personal-notes .carousel {
+    margin-bottom: 2rem;
 }
 
 .personal-notes .card {
     border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
 }
 
 .personal-notes .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
 }
 
 .personal-notes .card-img-top {
@@ -449,15 +453,15 @@ body {
 }
 
 .personal-notes .btn-custom {
-    background-color: #0050B3;
-    color: #fff;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #FFD700;
+    color: #0050B3;
     border: none;
+    transition: background-color 0.3s ease;
 }
 
 .personal-notes .btn-custom:hover {
-    background-color: #FFD700;
-    color: #0050B3;
+    background-color: #ffcc00;
+    color: #003D80;
 }
 
 .personal-notes .carousel-control-prev-icon,
@@ -481,7 +485,7 @@ body {
 
 /* --- SECCIÓN PAST ACHIEVEMENTS --- */
 .past-achievements {
-    /* Encapsula todos los estilos de esta sección */
+    /* Estilos específicos para Past Achievements */
 }
 
 .past-achievements .hero-past-achievements {
@@ -528,12 +532,11 @@ body {
     border-radius: 10px;
     overflow: hidden;
     background-color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .past-achievements .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 80, 179, 0.2);
+    transform: translateY(-10px);
 }
 
 .past-achievements .card-img-top {
@@ -558,8 +561,8 @@ body {
 }
 
 .past-achievements .btn-custom:hover {
-    background-color: #FF7F50;
-    color: #fff;
+    background-color: #FFD700;
+    color: #0050B3;
 }
 
 @media (max-width: 768px) {
@@ -570,5 +573,3 @@ body {
         font-size: 2rem;
     }
 }
-
-/* --- FIN DE SECCIONES --- */
