@@ -1,25 +1,15 @@
-/* --- Estilos Globales --- */
+/* Estilos Globales */
 body {
     background-color: #f0f2f5;
     color: #333;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* --- Navbar --- */
+/* Navbar Styles */
 .navbar {
     padding: 0.5rem 1rem;
     background: linear-gradient(135deg, #0062E6, #33AEFF);
@@ -82,30 +72,30 @@ img {
     }
 }
 
-/* --- Hero Section (Página Principal) --- */
+/* Hero Section Styles */
 .hero {
     background: linear-gradient(to right, #0050B3, #0062E6);
     color: #fff;
     padding: 100px 0;
 }
 
-.hero .hero-content {
+.hero-content {
     max-width: 50%;
 }
 
-.hero .hero-image {
+.hero-image {
     max-width: 40%;
     transition: transform 0.3s ease;
 }
 
-.hero .hero-img {
+.hero-img {
     width: 100%;
     border-radius: 10px;
     border: 4px solid #FFD700;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.hero .hero-img:hover {
+.hero-img:hover {
     transform: scale(1.05);
 }
 
@@ -130,13 +120,13 @@ img {
     color: #0050B3;
 }
 
-/* --- About Section --- */
+/* About Section Styles */
 #about {
     padding: 4rem 0;
     background: #fff;
 }
 
-#about .section-title {
+.section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -155,8 +145,8 @@ img {
     border-radius: 10px;
     padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
 .about-card:hover {
@@ -164,7 +154,7 @@ img {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.about-card .icon {
+.icon {
     font-size: 2.5rem;
     color: #0062E6;
     margin-bottom: 1rem;
@@ -182,16 +172,16 @@ img {
     line-height: 1.6;
 }
 
-.about-card .highlight {
+.highlight {
     color: #0062E6;
     font-weight: bold;
 }
 
-/* --- Contact Section --- */
+/* Contact Section Styles */
 #contact {
     padding: 60px 0;
     text-align: center;
-    background-color: #f0f2f5;
+    background-color: #f0f2f5; /* Fondo claro */
     color: #333;
 }
 
@@ -214,17 +204,17 @@ img {
 }
 
 .social-icon {
-    color: #0050B3;
-    font-size: 3rem;
+    color: #0050B3; /* Color azul oscuro */
     transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 3rem; /* Tamaño aumentado */
 }
 
 .social-icon:hover {
     transform: scale(1.2);
-    color: #FFD700;
+    color: #FFD700; /* Cambia a dorado al pasar el cursor */
 }
 
-/* --- Footer --- */
+/* Footer Styles */
 .footer {
     background-color: #003D80;
     color: #ccc;
@@ -236,19 +226,16 @@ img {
     margin: 0;
 }
 
-/* --- Media Queries --- */
 @media (max-width: 768px) {
-    .hero .hero-content,
-    .hero .hero-image {
+    .hero-content, .hero-image {
         max-width: 100%;
-        text-align: center;
     }
     .about-cards {
         grid-template-columns: 1fr;
     }
 }
 
-/* --- Animaciones --- */
+/* Animations */
 .fade-in-left {
     opacity: 0;
     animation: fadeInLeft 1s forwards;
@@ -260,39 +247,35 @@ img {
 }
 
 @keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
     from {
         opacity: 0;
         transform: translateX(-50px);
     }
+}
+
+@keyframes fadeInRight {
     to {
         opacity: 1;
         transform: translateX(0);
     }
-}
-
-@keyframes fadeInRight {
     from {
         opacity: 0;
         transform: translateX(50px);
     }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
-/* --- Hero Sections for Other Pages --- */
-.hero-section {
+/* Hero Section Styles for Teaching & Outreach */
+.hero-teaching {
+    background: url('images/hero-teaching.jpg') no-repeat center center/cover;
+    height: 300px;
     position: relative;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
-.hero-section::after {
+.hero-teaching::after {
     content: '';
     position: absolute;
     top: 0;
@@ -302,121 +285,431 @@ img {
     background: rgba(0, 80, 179, 0.7);
 }
 
-.hero-section .container {
+.hero-teaching .container {
     position: relative;
     z-index: 2;
 }
 
-.hero-section h1 {
+.hero-teaching h1 {
     font-size: 3rem;
     color: #fff;
-    margin-bottom: 1rem;
 }
 
-.hero-section p {
+.hero-teaching p {
     color: #eee;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
-/* --- Teaching & Outreach Page --- */
-.teaching-outreach .hero-section {
-    background-image: url('images/hero-teaching.jpg');
-}
-
-.teaching-outreach .hero-section h1,
-.teaching-outreach .hero-section p {
-    /* Aseguramos que los textos sean visibles */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.teaching-outreach .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    color: #0050B3;
-    font-weight: 700;
-}
-
-/* --- Personal Notes Page --- */
-.personal-notes .hero-section {
-    background-image: url('images/hero-personal-notes.jpg');
-}
-
-.personal-notes .hero-section h1,
-.personal-notes .hero-section p {
-    /* Aseguramos que los textos sean visibles */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.personal-notes .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    color: #0050B3;
-    font-weight: 700;
-}
-
-/* --- Past Achievements Page --- */
-.past-achievements .hero-section {
-    background-image: url('images/hero-past-achievements.jpg');
-}
-
-.past-achievements .hero-section h1,
-.past-achievements .hero-section p {
-    /* Aseguramos que los textos sean visibles */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.past-achievements .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    color: #0050B3;
-    font-weight: 700;
-}
-
-/* --- Ajustes Específicos para Mejorar la Visibilidad de los Títulos --- */
-.hero-section h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-}
-
-.hero-section p {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2.5rem;
-    }
-    .hero-section p {
-        font-size: 1.2rem;
-    }
-}
-
-/* --- Estilos para las Secciones --- */
+/* Section Titles */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #0050B3;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: #0050B3;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-teaching {
+        height: 200px;
+    }
+    .hero-teaching h1 {
+        font-size: 2rem;
+    }
+}
+/* Estilos para el efecto de aparición (reveal) */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para el modal de imágenes */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1050; /* Por encima del carrusel */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita scroll si es necesario */
+    background-color: rgba(0,0,0,0.8); /* Fondo oscuro */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* Estilos para las imágenes del carrusel */
+.carousel-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Section Styles for Teaching & Outreach */
+.hero-teaching {
+    background: url('images/hero-teaching.jpg') no-repeat center center/cover;
+    height: 300px;
     position: relative;
 }
 
-.section-title::after {
+.hero-teaching::after {
     content: '';
-    width: 80px;
-    height: 4px;
-    background-color: #FFD700;
-    display: block;
-    margin: 0.5rem auto 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 80, 179, 0.7);
 }
 
+.hero-teaching .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-teaching h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hero-teaching p {
+    color: #eee;
+    font-size: 1.2rem;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0050B3;
+    font-weight: 700;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top, .card .carousel-item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Carousel Styles */
+.card .carousel {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .carousel-item img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Reveal Effect Styles */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* Hover Effect on Carousel Images */
+.carousel-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+/* Hero Section Styles for Personal Notes */
+.hero-personal-notes {
+    background: url('images/hero-personal-notes.jpg') no-repeat center center/cover;
+    height: 300px;
+    position: relative;
+}
+
+.hero-personal-notes::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 80, 179, 0.7);
+}
+
+.hero-personal-notes .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-personal-notes h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hero-personal-notes p {
+    color: #eee;
+    font-size: 1.2rem;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: #0050B3;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555;
+}
+
+/* Button Custom Style */
+.btn-custom {
+    background-color: #0050B3;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #FFD700;
+    color: #0050B3;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+@media (max-width: 768px) {
+    .hero-personal-notes {
+        height: 200px;
+    }
+    .hero-personal-notes h1 {
+        font-size: 2rem;
+    }
+}
+/* past-achievements.css */
+/* Paleta de colores */
+/* Fondo: #1a1a2e (azul oscuro) */
+/* Primario: #e94560 (rojo brillante) */
+/* Secundario: #0f3460 (azul marino) */
+/* Texto: #eaeaea (gris claro) */
+/* Hero Section Styles */
+.hero-past-achievements {
+    background: url('images/hero-past-achievements.jpg') no-repeat center center/cover;
+    height: 300px;
+    position: relative;
+}
+.hero-past-achievements::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 26, 46, 0.8);
+}
+.hero-past-achievements .container {
+    position: relative;
+    z-index: 2;
+}
+.hero-past-achievements h1 {
+    font-size: 3rem;
+    color: #eaeaea;
+}
+.hero-past-achievements p {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #e94560;
+    font-weight: 700;
+}
+/* Card Styles */
+.card {
+    background-color: #0f3460;
+    color: #eaeaea;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.card-title {
+    color: #e94560;
+    font-weight: bold;
+}
+.card-text {
+    color: #ccc;
+}
+.btn-primary {
+    background-color: #e94560;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #eaeaea;
+    color: #e94560;
+}
+body {
+    background-color: #1a1a2e;
+    color: #eaeaea;
+}
