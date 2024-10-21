@@ -1,8 +1,8 @@
 /* Estilos Globales */
 body {
-    background-color: #f5f7fa;
+    background-color: #f9fafb;
     color: #333;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -10,6 +10,7 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 img {
@@ -17,121 +18,124 @@ img {
     height: auto;
 }
 
+/* Tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Paleta de Colores */
+/* 
+    -- Azul Oscuro: #0D1B2A
+    -- Azul Medio: #1B263B
+    -- Azul Claro: #415A77
+    -- Azul Muy Claro: #778DA9
+    -- Blanco: #F9FAFB
+    -- Acento: #E0E1DD
+*/
+
 /* Navbar */
 .navbar {
-    padding: 0.5rem 1rem;
-    background-color: #0050B3;
+    background-color: #1B263B;
+    padding: 0.75rem 1rem;
 }
 
 .navbar .navbar-brand {
     font-size: 1.8rem;
-    font-weight: bold;
-    color: #fff;
+    font-weight: 700;
+    color: #E0E1DD;
 }
 
 .navbar .navbar-brand:hover {
-    color: #FFD700;
+    color: #F9FAFB;
 }
 
 .navbar .nav-link {
-    color: #fff;
-    padding: 0.5rem 1rem;
+    color: #E0E1DD;
+    margin-right: 1rem;
+    transition: color 0.3s;
 }
 
 .navbar .nav-link:hover {
-    color: #FFD700;
+    color: #F9FAFB;
 }
 
 .navbar .dropdown-menu {
-    background-color: #0050B3;
+    background-color: #1B263B;
+    border: none;
 }
 
 .navbar .dropdown-item {
-    color: #fff;
+    color: #E0E1DD;
 }
 
 .navbar .dropdown-item:hover {
-    background-color: #FFD700;
-    color: #0050B3;
+    background-color: #415A77;
+    color: #F9FAFB;
 }
 
 .navbar-toggler {
     border: none;
-    outline: none;
 }
 
 .navbar-toggler-icon {
     filter: invert(1);
 }
 
-/* Hero Section (Página Principal) */
+/* Hero Section */
 .hero {
-    background: linear-gradient(to right, #0050B3, #0062E6);
-    color: #fff;
-    padding: 100px 0;
-}
-
-.hero .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hero .hero-content {
-    flex: 1 1 50%;
-    padding-right: 2rem;
-    animation: fadeInLeft 1s forwards;
-}
-
-.hero .hero-image {
-    flex: 1 1 40%;
-    animation: fadeInRight 1s forwards;
+    background: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 0.8)), url('images/hero-background.jpg') no-repeat center center/cover;
+    color: #E0E1DD;
+    padding: 120px 0;
+    text-align: center;
 }
 
 .hero h1 {
     font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .hero p {
     font-size: 1.25rem;
-    color: #ddd;
+    margin-bottom: 2rem;
 }
 
 .hero .btn-custom {
-    background-color: #FFD700;
-    color: #0050B3;
+    background-color: #E0E1DD;
+    color: #1B263B;
     border: none;
-    margin-top: 1rem;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .hero .btn-custom:hover {
-    background-color: #ffcc00;
-}
-
-.hero-img {
-    width: 100%;
-    border-radius: 10px;
-    border: 4px solid #FFD700;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #778DA9;
+    color: #F9FAFB;
 }
 
 /* About Section */
 #about {
     padding: 4rem 0;
-    background-color: #fff;
+    background-color: #F9FAFB;
 }
 
 #about .section-title {
-    text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #0050B3;
+    color: #1B263B;
     font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+#about .section-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #E0E1DD;
+    display: block;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
 }
 
 .about-cards {
@@ -142,30 +146,32 @@ img {
 }
 
 .about-card {
-    background-color: #f5f7fa;
+    background-color: #FFFFFF;
     border-radius: 10px;
     padding: 2rem;
     text-align: center;
     flex: 1 1 calc(25% - 2rem);
     max-width: calc(25% - 2rem);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .about-card .icon {
     font-size: 3rem;
-    color: #0050B3;
+    color: #1B263B;
     margin-bottom: 1rem;
 }
 
 .about-card h3 {
     font-size: 1.5rem;
-    color: #0050B3;
+    color: #1B263B;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .about-card p {
@@ -175,26 +181,27 @@ img {
 }
 
 .about-card .highlight {
-    color: #0050B3;
-    font-weight: bold;
+    color: #415A77;
+    font-weight: 600;
 }
 
 /* Contact Section */
 #contact {
     padding: 4rem 0;
-    background-color: #f0f2f5;
+    background-color: #E0E1DD;
     text-align: center;
 }
 
 #contact h2 {
     font-size: 2.5rem;
-    color: #0050B3;
+    color: #1B263B;
     margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 #contact p {
     font-size: 1.1rem;
-    color: #555;
+    color: #333;
     margin-bottom: 2rem;
 }
 
@@ -205,371 +212,221 @@ img {
 }
 
 .social-links a {
-    color: #0050B3;
+    color: #1B263B;
     font-size: 2.5rem;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .social-links a:hover {
-    color: #FFD700;
-    transform: scale(1.2);
+    color: #778DA9;
+    transform: scale(1.1);
 }
 
 /* Footer */
 .footer {
-    background-color: #003D80;
-    color: #ccc;
+    background-color: #1B263B;
+    color: #E0E1DD;
     text-align: center;
     padding: 1rem 0;
 }
 
 .footer p {
     margin: 0;
+    font-size: 0.9rem;
 }
 
-/* Animaciones */
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+/* Hero Sections for Other Pages */
+.hero-section {
+    position: relative;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 100px 0 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 27, 42, 0.7);
 }
 
-/* Responsive */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    color: #E0E1DD;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    color: #1B263B;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #E0E1DD;
+    display: block;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: #1B263B;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-custom {
+    background-color: #1B263B;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #415A77;
+    color: #FFFFFF;
+}
+
+/* Teaching & Outreach */
+.teaching-outreach .hero-section {
+    background-image: url('images/hero-teaching.jpg');
+}
+
+.teaching-outreach .btn-custom {
+    background-color: #1B263B;
+}
+
+.teaching-outreach .btn-custom:hover {
+    background-color: #415A77;
+}
+
+/* Personal Notes */
+.personal-notes .hero-section {
+    background-image: url('images/hero-personal-notes.jpg');
+}
+
+.personal-notes .btn-custom {
+    background-color: #1B263B;
+}
+
+.personal-notes .btn-custom:hover {
+    background-color: #415A77;
+}
+
+/* Past Achievements */
+.past-achievements .hero-section {
+    background-image: url('images/hero-past-achievements.jpg');
+}
+
+.past-achievements .btn-custom {
+    background-color: #1B263B;
+}
+
+.past-achievements .btn-custom:hover {
+    background-color: #415A77;
+}
+
+.past-achievements .card-title {
+    font-size: 1.2rem;
+}
+
+.past-achievements .card-text {
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
 @media (max-width: 992px) {
-    .hero .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .about-card {
+        flex: 1 1 calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1, .hero-section h1 {
+        font-size: 2.5rem;
     }
 
-    .hero .hero-content,
-    .hero .hero-image {
-        flex: 1 1 100%;
-        max-width: 100%;
-        padding: 0;
-    }
-
-    .hero .hero-content {
-        order: 2;
-        animation: fadeInUp 1s forwards;
-    }
-
-    .hero .hero-image {
-        order: 1;
-        margin-bottom: 2rem;
-        animation: fadeInDown 1s forwards;
-    }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes fadeInDown {
-        from {
-            opacity: 0;
-            transform: translateY(-50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .hero p, .hero-section p {
+        font-size: 1.1rem;
     }
 
     .about-card {
         flex: 1 1 100%;
         max-width: 100%;
     }
-}
 
-/* --- SECCIÓN TEACHING & OUTREACH --- */
-.teaching-outreach {
-    /* Estilos específicos para Teaching & Outreach */
-}
-
-.teaching-outreach .hero-teaching {
-    background: url('images/hero-teaching.jpg') no-repeat center center/cover;
-    height: 300px;
-    position: relative;
-}
-
-.teaching-outreach .hero-teaching::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 80, 179, 0.7);
-}
-
-.teaching-outreach .hero-teaching .container {
-    position: relative;
-    z-index: 2;
-}
-
-.teaching-outreach .hero-teaching h1 {
-    font-size: 3rem;
-    color: #fff;
-}
-
-.teaching-outreach .hero-teaching p {
-    color: #eee;
-    font-size: 1.2rem;
-}
-
-.teaching-outreach .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #0050B3;
-    font-weight: 700;
-}
-
-.teaching-outreach .card {
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #fff;
-    transition: transform 0.3s ease;
-}
-
-.teaching-outreach .card:hover {
-    transform: translateY(-10px);
-}
-
-.teaching-outreach .card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-.teaching-outreach .card-title {
-    color: #0050B3;
-    font-weight: bold;
-}
-
-.teaching-outreach .card-text {
-    color: #555;
-}
-
-.teaching-outreach .btn-custom {
-    background-color: #0050B3;
-    color: #fff;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.teaching-outreach .btn-custom:hover {
-    background-color: #FFD700;
-    color: #0050B3;
-}
-
-/* --- SECCIÓN PERSONAL NOTES --- */
-.personal-notes {
-    /* Estilos específicos para Personal Notes */
-}
-
-.personal-notes .hero-personal-notes {
-    background: url('images/hero-personal-notes.jpg') no-repeat center center/cover;
-    height: 300px;
-    position: relative;
-}
-
-.personal-notes .hero-personal-notes::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.personal-notes .hero-personal-notes .container {
-    position: relative;
-    z-index: 2;
-}
-
-.personal-notes .hero-personal-notes h1 {
-    font-size: 3rem;
-    color: #FFD700;
-}
-
-.personal-notes .hero-personal-notes p {
-    color: #fff;
-    font-size: 1.2rem;
-}
-
-.personal-notes .carousel {
-    margin-bottom: 2rem;
-}
-
-.personal-notes .card {
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #fff;
-    transition: transform 0.3s ease;
-}
-
-.personal-notes .card:hover {
-    transform: translateY(-10px);
-}
-
-.personal-notes .card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-.personal-notes .card-title {
-    color: #0050B3;
-    font-weight: bold;
-}
-
-.personal-notes .card-text {
-    color: #555;
-}
-
-.personal-notes .btn-custom {
-    background-color: #FFD700;
-    color: #0050B3;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.personal-notes .btn-custom:hover {
-    background-color: #ffcc00;
-    color: #003D80;
-}
-
-.personal-notes .carousel-control-prev-icon,
-.personal-notes .carousel-control-next-icon {
-    filter: invert(1);
-}
-
-.personal-notes .carousel-control-prev,
-.personal-notes .carousel-control-next {
-    width: 5%;
-}
-
-@media (max-width: 768px) {
-    .personal-notes .hero-personal-notes {
-        height: 200px;
-    }
-    .personal-notes .hero-personal-notes h1 {
+    .section-title {
         font-size: 2rem;
     }
 }
 
-/* --- SECCIÓN PAST ACHIEVEMENTS --- */
-.past-achievements {
-    /* Estilos específicos para Past Achievements */
-}
-
-.past-achievements .hero-past-achievements {
-    background: url('images/hero-past-achievements.jpg') no-repeat center center/cover;
-    height: 300px;
-    position: relative;
-}
-
-.past-achievements .hero-past-achievements::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 80, 179, 0.7);
-}
-
-.past-achievements .hero-past-achievements .container {
-    position: relative;
-    z-index: 2;
-}
-
-.past-achievements .hero-past-achievements h1 {
-    font-size: 3rem;
-    color: #fff;
-}
-
-.past-achievements .hero-past-achievements p {
-    color: #eee;
-    font-size: 1.2rem;
-}
-
-.past-achievements .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #0050B3;
-    font-weight: 700;
-}
-
-.past-achievements .card {
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #fff;
-    transition: transform 0.3s ease;
-}
-
-.past-achievements .card:hover {
-    transform: translateY(-10px);
-}
-
-.past-achievements .card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-.past-achievements .card-title {
-    color: #0050B3;
-    font-weight: bold;
-}
-
-.past-achievements .card-text {
-    color: #555;
-}
-
-.past-achievements .btn-custom {
-    background-color: #0050B3;
-    color: #fff;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.past-achievements .btn-custom:hover {
-    background-color: #FFD700;
-    color: #0050B3;
-}
-
-@media (max-width: 768px) {
-    .past-achievements .hero-past-achievements {
-        height: 200px;
+@media (max-width: 576px) {
+    .navbar .navbar-brand {
+        font-size: 1.5rem;
     }
-    .past-achievements .hero-past-achievements h1 {
+
+    .social-links a {
         font-size: 2rem;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
     }
 }
