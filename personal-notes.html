@@ -69,59 +69,98 @@
 
     <!-- Contenido Principal -->
     <main class="container my-5">
-        <!-- Sección de Tarjetas -->
-        <div class="row">
-            <!-- Tarjeta 1 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-4 shadow-sm h-100 note-card">
-                    <img src="Fotos/dls.jpg" class="card-img-top" alt="Quantum Mechanics Basics">
-                    <div class="card-body">
-                        <h5 class="card-title">Drug delivery system</h5>
-                        <p class="card-text">An introduction to the fundamental principles of quantum mechanics.</p>
-                        <button class="btn btn-custom view-note-btn" data-bs-toggle="modal" data-bs-target="#noteModal" data-note-title="Quantum Mechanics Basics" data-note-url="https://www.canva.com/link-to-your-presentation-1">View Notes</button>
+        <!-- Carrusel de Tarjetas -->
+        <div id="notesCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Grupo de Tarjetas 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Tarjeta 1 -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm h-100 note-card">
+                                <img src="Fotos/dls.jpg" class="card-img-top" alt="Drug Delivery Systems">
+                                <div class="card-body">
+                                    <h5 class="card-title">Drug Delivery Systems</h5>
+                                    <p class="card-text">Understanding the mechanisms of targeted drug delivery.</p>
+                                    <a href="https://www.canva.com/link-to-your-presentation-1" target="_blank" class="btn btn-custom">View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tarjeta 2 -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm h-100 note-card">
+                                <img src="Fotos/bioprinting.jpeg" class="card-img-top" alt="Bioprinting Techniques">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bioprinting Techniques</h5>
+                                    <p class="card-text">Exploring the latest advancements in 3D bioprinting technologies.</p>
+                                    <a href="https://www.canva.com/link-to-your-presentation-2" target="_blank" class="btn btn-custom">View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tarjeta 3 -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm h-100 note-card">
+                                <img src="Fotos/sustainable.jpg" class="card-img-top" alt="Sustainable Materials">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sustainable Materials</h5>
+                                    <p class="card-text">Investigating eco-friendly materials for a sustainable future.</p>
+                                    <a href="https://www.canva.com/link-to-your-presentation-3" target="_blank" class="btn btn-custom">View Notes</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Tarjeta 2 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-4 shadow-sm h-100 note-card">
-                    <img src="Fotos/bioprinting.jpeg" class="card-img-top" alt="Bioprinting Techniques">
-                    <div class="card-body">
-                        <h5 class="card-title">Bioprinting Techniques</h5>
-                        <p class="card-text">Exploring the latest advancements in 3D bioprinting technologies.</p>
-                        <button class="btn btn-custom view-note-btn" data-bs-toggle="modal" data-bs-target="#noteModal" data-note-title="Bioprinting Techniques" data-note-url="https://www.canva.com/link-to-your-presentation-2">View Notes</button>
+                <!-- Grupo de Tarjetas 2 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Tarjeta 4 -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm h-100 note-card">
+                                <img src="Fotos/note4.jpg" class="card-img-top" alt="Nanotechnology Applications">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nanotechnology Applications</h5>
+                                    <p class="card-text">Exploring the impact of nanotech in modern medicine.</p>
+                                    <a href="https://www.canva.com/link-to-your-presentation-4" target="_blank" class="btn btn-custom">View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tarjeta 5 -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm h-100 note-card">
+                                <img src="Fotos/note5.jpg" class="card-img-top" alt="Bioarchaeology Insights">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bioarchaeology Insights</h5>
+                                    <p class="card-text">Connecting ancient practices with modern science.</p>
+                                    <a href="https://www.canva.com/link-to-your-presentation-5" target="_blank" class="btn btn-custom">View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tarjeta 6 -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm h-100 note-card">
+                                <img src="Fotos/note6.jpg" class="card-img-top" alt="AI in Healthcare">
+                                <div class="card-body">
+                                    <h5 class="card-title">AI in Healthcare</h5>
+                                    <p class="card-text">The role of artificial intelligence in modern medicine.</p>
+                                    <a href="https://www.canva.com/link-to-your-presentation-6" target="_blank" class="btn btn-custom">View Notes</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- Puedes agregar más grupos de tarjetas siguiendo el mismo formato -->
             </div>
-            <!-- Tarjeta 3 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-4 shadow-sm h-100 note-card">
-                    <img src="Fotos/sustainable.jpg" class="card-img-top" alt="Sustainable Materials">
-                    <div class="card-body">
-                        <h5 class="card-title">Sustainable Materials</h5>
-                        <p class="card-text">Investigating eco-friendly materials for a sustainable future.</p>
-                        <button class="btn btn-custom view-note-btn" data-bs-toggle="modal" data-bs-target="#noteModal" data-note-title="Sustainable Materials" data-note-url="https://www.canva.com/link-to-your-presentation-3">View Notes</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Puedes agregar más tarjetas siguiendo el mismo formato -->
+            <!-- Controles del Carrusel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#notesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#notesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </main>
-
-    <!-- Modal para mostrar las notas -->
-    <div class="modal fade" id="noteModal" tabindex="-1" aria-labelledby="noteModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="noteModalLabel">Note Title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <iframe id="noteIframe" src="" frameborder="0" style="width: 100%; height: 80vh;"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer mt-auto">
@@ -132,7 +171,6 @@
 
     <!-- Scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script Personalizado -->
-    <script src="script.js"></script>
 </body>
 </html>
+
