@@ -1,62 +1,68 @@
-/* --- Estilos Globales --- */
+/* Estilos Globales */
 body {
     background-color: #f0f2f5;
     color: #333;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* --- Navbar --- */
+/* Navbar Styles */
 .navbar {
     padding: 0.5rem 1rem;
-    background-color: #0050B3;
+    background: linear-gradient(135deg, #0062E6, #33AEFF);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.navbar-brand {
 .navbar .navbar-brand {
+    font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
     font-weight: bold;
     color: #fff;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
+.navbar-brand:hover {
 .navbar .navbar-brand:hover {
     color: #FFD700;
+    text-decoration: none;
+    transform: translateY(-3px);
 }
 
+.nav-link {
 .navbar .nav-link {
     color: #fff;
     padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
+.nav-link:hover {
 .navbar .nav-link:hover {
     color: #FFD700;
+    transform: translateY(-3px);
 }
 
+.dropdown-menu {
 .navbar .dropdown-menu {
-    background-color: #0050B3;
+    background-color: #0062E6;
     border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.dropdown-item {
 .navbar .dropdown-item {
     color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.dropdown-item:hover {
 .navbar .dropdown-item:hover {
-    background-color: #FFD700;
-    color: #0050B3;
+    background-color: #0050B3;
+    color: #FFD700;
 }
 
 .navbar-toggler {
@@ -68,26 +74,42 @@ img {
     filter: invert(1);
 }
 
-/* --- Hero Section (Página Principal) --- */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+/* Hero Section Styles */
+/* Hero Section Styles (Home Page) */
 .hero {
     background: linear-gradient(to right, #0050B3, #0062E6);
     color: #fff;
     padding: 100px 0;
 }
 
-.hero .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
+.hero-content {
 .hero .hero-content {
     max-width: 50%;
 }
 
+.hero-image {
 .hero .hero-image {
     max-width: 40%;
+    transition: transform 0.3s ease;
+}
+
+.hero-img {
+.hero .hero-img {
+    width: 100%;
+    border-radius: 10px;
+    border: 4px solid #FFD700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-img:hover {
+.hero .hero-img:hover {
+    transform: scale(1.05);
 }
 
 .hero h1 {
@@ -100,34 +122,24 @@ img {
     color: #ddd;
 }
 
-.hero .btn-custom {
+.btn-custom {
     border-color: #FFD700;
     color: #FFD700;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.hero .btn-custom:hover {
+.btn-custom:hover {
     background-color: #FFD700;
     color: #0050B3;
 }
 
-.hero-img {
-    width: 100%;
-    border-radius: 10px;
-    border: 4px solid #FFD700;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.hero-img:hover {
-    transform: scale(1.05);
-}
-
-/* --- About Section --- */
+/* About Section Styles */
 #about {
     padding: 4rem 0;
     background: #fff;
 }
 
+.section-title {
 #about .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -147,8 +159,8 @@ img {
     border-radius: 10px;
     padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
 .about-card:hover {
@@ -156,6 +168,7 @@ img {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+.icon {
 .about-card .icon {
     font-size: 2.5rem;
     color: #0062E6;
@@ -174,15 +187,17 @@ img {
     line-height: 1.6;
 }
 
+.highlight {
 .about-card .highlight {
     color: #0062E6;
     font-weight: bold;
 }
 
-/* --- Contact Section --- */
+/* Contact Section Styles */
 #contact {
     padding: 60px 0;
     text-align: center;
+    background-color: #f0f2f5; /* Fondo claro */
     background-color: #f0f2f5;
     color: #333;
 }
@@ -206,17 +221,20 @@ img {
 }
 
 .social-icon {
+    color: #0050B3; /* Color azul oscuro */
     color: #0050B3;
     transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 3rem; /* Tamaño aumentado */
     font-size: 3rem;
 }
 
 .social-icon:hover {
     transform: scale(1.2);
+    color: #FFD700; /* Cambia a dorado al pasar el cursor */
     color: #FFD700;
 }
 
-/* --- Footer --- */
+/* Footer Styles */
 .footer {
     background-color: #003D80;
     color: #ccc;
@@ -228,12 +246,8 @@ img {
     margin: 0;
 }
 
-/* --- Media Queries --- */
 @media (max-width: 768px) {
-    .hero .container {
-        flex-direction: column;
-        text-align: center;
-    }
+    .hero-content, .hero-image {
     .hero .hero-content,
     .hero .hero-image {
         max-width: 100%;
@@ -243,7 +257,7 @@ img {
     }
 }
 
-/* --- Animaciones --- */
+/* Animations */
 .fade-in-left {
     opacity: 0;
     animation: fadeInLeft 1s forwards;
@@ -255,35 +269,34 @@ img {
 }
 
 @keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
     from {
         opacity: 0;
         transform: translateX(-50px);
     }
+}
+
+@keyframes fadeInRight {
     to {
         opacity: 1;
         transform: translateX(0);
     }
-}
-
-@keyframes fadeInRight {
     from {
         opacity: 0;
         transform: translateX(50px);
     }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
-/* --- Past Achievements Page --- */
-.past-achievements .hero-past-achievements {
-    background: url('images/hero-past-achievements.jpg') no-repeat center center/cover;
+/* Hero Section Styles for Teaching & Outreach */
+.hero-teaching {
+    background: url('images/hero-teaching.jpg') no-repeat center center/cover;
     height: 300px;
     position: relative;
 }
-
-.past-achievements .hero-past-achievements::after {
+.hero-teaching::after {
     content: '';
     position: absolute;
     top: 0;
@@ -292,128 +305,127 @@ img {
     bottom: 0;
     background: rgba(0, 80, 179, 0.7);
 }
-
-.past-achievements .hero-past-achievements .container {
+.hero-teaching .container {
     position: relative;
     z-index: 2;
-    text-align: center;
 }
-
-.past-achievements .hero-past-achievements h1 {
+.hero-teaching h1 {
     font-size: 3rem;
     color: #fff;
+/* --- SECCIÓN TEACHING & OUTREACH --- */
+.teaching-outreach {
+    /* Encapsula todos los estilos de esta sección */
 }
 
-.past-achievements .hero-past-achievements p {
+.hero-teaching p {
     color: #eee;
     font-size: 1.2rem;
 }
-
-.past-achievements .section-title {
+/* Section Titles */
+.section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #0050B3;
     font-weight: 700;
 }
-
-.past-achievements .card {
+/* Card Styles */
+.card {
     border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.past-achievements .card:hover {
+.card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 80, 179, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
-.past-achievements .card-img-top {
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     height: 200px;
     object-fit: cover;
 }
-
-.past-achievements .card-title {
+.card-title {
     color: #0050B3;
     font-weight: bold;
 }
-
-.past-achievements .card-text {
+.card-text {
     color: #555;
 }
-
-.past-achievements .btn-custom {
-    background-color: #0050B3;
-    color: #fff;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.past-achievements .btn-custom:hover {
-    background-color: #FFD700;
-    color: #0050B3;
-}
-
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .past-achievements .hero-past-achievements {
+    .hero-teaching {
         height: 200px;
     }
-    .past-achievements .hero-past-achievements h1 {
+    .hero-teaching h1 {
         font-size: 2rem;
     }
 }
-
-/* --- Personal Notes Page --- */
-.personal-notes .hero-personal-notes {
-    background: url('images/hero-personal-notes.jpg') no-repeat center center/cover;
-    height: 300px;
-    position: relative;
+/* Estilos para el efecto de aparición (reveal) */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
 }
-
-.personal-notes .hero-personal-notes::after {
-    content: '';
-    position: absolute;
-    top: 0;
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Estilos para el modal de imágenes */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1050; /* Por encima del carrusel */
+    padding-top: 100px;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 80, 179, 0.7);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita scroll si es necesario */
+    background-color: rgba(0,0,0,0.8); /* Fondo oscuro */
 }
-
-.personal-notes .hero-personal-notes .container {
-    position: relative;
-    z-index: 2;
-    text-align: center;
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
 }
-
-.personal-notes .hero-personal-notes h1 {
-    font-size: 3rem;
+.close {
+    position: absolute;
+    top: 50px;
+    right: 35px;
     color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
-
-.personal-notes .hero-personal-notes p {
-    color: #eee;
-    font-size: 1.2rem;
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
-
-@media (max-width: 768px) {
-    .personal-notes .hero-personal-notes {
-        height: 200px;
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
     }
-    .personal-notes .hero-personal-notes h1 {
-        font-size: 2rem;
-    }
 }
-
-/* --- Teaching & Outreach Page --- */
+/* Estilos para las imágenes del carrusel */
+.carousel-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+/* Hero Section Styles for Teaching & Outreach */
+.hero-teaching {
 .teaching-outreach .hero-teaching {
     background: url('images/hero-teaching.jpg') no-repeat center center/cover;
     height: 300px;
     position: relative;
 }
 
+.hero-teaching::after {
 .teaching-outreach .hero-teaching::after {
     content: '';
     position: absolute;
@@ -424,22 +436,125 @@ img {
     background: rgba(0, 80, 179, 0.7);
 }
 
+.hero-teaching .container {
 .teaching-outreach .hero-teaching .container {
     position: relative;
     z-index: 2;
-    text-align: center;
 }
 
+.hero-teaching h1 {
 .teaching-outreach .hero-teaching h1 {
     font-size: 3rem;
     color: #fff;
 }
 
+.hero-teaching p {
 .teaching-outreach .hero-teaching p {
     color: #eee;
     font-size: 1.2rem;
 }
 
+/* Section Titles */
+.section-title {
+.teaching-outreach .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0050B3;
+    font-weight: 700;
+}
+
+/* Card Styles */
+.card {
+.teaching-outreach .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+.teaching-outreach .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top, .card .carousel-item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+/* Carousel Styles */
+.card .carousel {
+.teaching-outreach .card-img-top,
+.teaching-outreach .card .carousel-item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card .carousel-item img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Reveal Effect Styles */
+.reveal {
+.teaching-outreach .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+.teaching-outreach .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal Styles */
+.modal {
+.teaching-outreach .modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+.teaching-outreach .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+.teaching-outreach .close {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+.teaching-outreach .close:hover,
+.teaching-outreach .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
 @media (max-width: 768px) {
     .teaching-outreach .hero-teaching {
         height: 200px;
@@ -448,3 +563,269 @@ img {
         font-size: 2rem;
     }
 }
+
+/* Hover Effect on Carousel Images */
+.carousel-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+/* --- SECCIÓN PERSONAL NOTES --- */
+.personal-notes {
+    /* Encapsula todos los estilos de esta sección */
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+/* Hero Section Styles for Personal Notes */
+.hero-personal-notes {
+.personal-notes .hero-personal-notes {
+    background: url('images/hero-personal-notes.jpg') no-repeat center center/cover;
+    height: 300px;
+    position: relative;
+}
+
+.hero-personal-notes::after {
+.personal-notes .hero-personal-notes::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 80, 179, 0.7);
+}
+
+.hero-personal-notes .container {
+.personal-notes .hero-personal-notes .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-personal-notes h1 {
+.personal-notes .hero-personal-notes h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hero-personal-notes p {
+.personal-notes .hero-personal-notes p {
+    color: #eee;
+    font-size: 1.2rem;
+}
+
+/* Card Styles */
+.card {
+.personal-notes .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+.personal-notes .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+.personal-notes .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+.personal-notes .card-title {
+    color: #0050B3;
+    font-weight: bold;
+}
+
+.card-text {
+.personal-notes .card-text {
+    color: #555;
+}
+
+/* Button Custom Style */
+.btn-custom {
+.personal-notes .btn-custom {
+    background-color: #0050B3;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+}
+
+.btn-custom:hover {
+.personal-notes .btn-custom:hover {
+    background-color: #FFD700;
+    color: #0050B3;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+.personal-notes .carousel-control-prev-icon,
+.personal-notes .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+.personal-notes .carousel-control-prev,
+.personal-notes .carousel-control-next {
+    width: 5%;
+}
+
+@media (max-width: 768px) {
+    .hero-personal-notes {
+    .personal-notes .hero-personal-notes {
+        height: 200px;
+    }
+    .hero-personal-notes h1 {
+    .personal-notes .hero-personal-notes h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Estilos para "Past Achievements" */
+/* Paleta de colores */
+/* Fondo: #f8f9fa (gris claro) */
+/* Primario: #0050B3 (azul profundo) */
+/* Secundario: #FF7F50 (coral) */
+/* Texto: #333 (gris oscuro) */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+}
+.navbar-light .navbar-brand {
+    color: #0050B3;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #0050B3;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color: #FF7F50;
+/* --- SECCIÓN PAST ACHIEVEMENTS --- */
+.past-achievements {
+    /* Encapsula todos los estilos de esta sección */
+}
+
+.navbar-light .navbar-nav .dropdown-menu {
+    border: none;
+}
+.navbar-light .navbar-nav .dropdown-item {
+    color: #0050B3;
+}
+.navbar-light .navbar-nav .dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+.hero-past-achievements {
+.past-achievements .hero-past-achievements {
+    background: url('images/hero-past-achievements.jpg') no-repeat center center/cover;
+    height: 300px;
+    position: relative;
+}
+
+.hero-past-achievements::after {
+.past-achievements .hero-past-achievements::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 80, 179, 0.7);
+}
+
+.hero-past-achievements .container {
+.past-achievements .hero-past-achievements .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-past-achievements h1 {
+.past-achievements .hero-past-achievements h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hero-past-achievements p {
+.past-achievements .hero-past-achievements p {
+    color: #eee;
+    font-size: 1.2rem;
+}
+
+.section-title {
+.past-achievements .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0050B3;
+    font-weight: 700;
+}
+
+.card {
+.past-achievements .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+.past-achievements .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 80, 179, 0.2);
+}
+
+.card-img-top {
+.past-achievements .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+.past-achievements .card-title {
+    color: #0050B3;
+    font-weight: bold;
+}
+
+.card-text {
+.past-achievements .card-text {
+    color: #555;
+}
+
+.btn-custom {
+.past-achievements .btn-custom {
+    background-color: #0050B3;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+.past-achievements .btn-custom:hover {
+    background-color: #FF7F50;
+    color: #fff;
+}
+
+.footer {
+    background-color: #e9ecef;
+@media (max-width: 768px) {
+    .past-achievements .hero-past-achievements {
+        height: 200px;
+    }
+    .past-achievements .hero-past-achievements h1 {
+        font-size: 2rem;
+    }
+}
+
+.footer p {
+    margin: 0;
+    color: #555;
+}
+/* --- FIN DE SECCIONES --- */
