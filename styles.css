@@ -635,81 +635,73 @@ body {
         font-size: 2rem;
     }
 }
-/* past-achievements.css */
-/* Paleta de colores */
-/* Fondo: #1a1a2e (azul oscuro) */
-/* Primario: #e94560 (rojo brillante) */
-/* Secundario: #0f3460 (azul marino) */
-/* Texto: #eaeaea (gris claro) */
-/* Hero Section Styles */
+/* CSS específico para Past Achievements */
 .hero-past-achievements {
-    background: url('images/hero-past-achievements.jpg') no-repeat center center/cover;
-    height: 300px;
-    position: relative;
-}
-.hero-past-achievements::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(26, 26, 46, 0.8);
-}
-.hero-past-achievements .container {
-    position: relative;
-    z-index: 2;
-}
-.hero-past-achievements h1 {
-    font-size: 3rem;
-    color: #eaeaea;
-}
-.hero-past-achievements p {
-    color: #ccc;
-    font-size: 1.2rem;
-}
-/* Section Titles */
-.section-title {
+    background-color: #2c3e50; /* Fondo azul oscuro */
+    color: #ffffff;
+    padding: 100px 0;
     text-align: center;
+}
+
+.hero-past-achievements h1 {
+    font-size: 3.5rem;
+    color: #f39c12; /* Acento dorado */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-past-achievements p {
+    font-size: 1.2rem;
+    color: #ecf0f1; /* Texto claro */
+}
+
+.section-title {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #e94560;
-    font-weight: 700;
+    color: #f39c12; /* Acento dorado */
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 30px;
 }
-/* Card Styles */
+
 .card {
-    background-color: #0f3460;
-    color: #eaeaea;
+    background-color: #34495e; /* Azul oscuro */
+    color: #ffffff;
     border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
+
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
+
 .card-title {
-    color: #e94560;
-    font-weight: bold;
+    color: #f39c12; /* Acento */
 }
+
 .card-text {
-    color: #ccc;
+    color: #ecf0f1;
 }
-.btn-primary {
-    background-color: #e94560;
-    border: none;
+
+.btn-custom {
+    background-color: #f39c12;
+    color: #ffffff;
     transition: background-color 0.3s ease;
 }
-.btn-primary:hover {
-    background-color: #eaeaea;
-    color: #e94560;
+
+.btn-custom:hover {
+    background-color: #d35400; /* Naranja oscuro */
 }
-body {
-    background-color: #1a1a2e;
-    color: #eaeaea;
+
+/* Animaciones con AOS */
+[data-aos] {
+    transition-property: transform, opacity;
+    transition-timing-function: ease-out;
+    transition-duration: 0.6s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
 }
