@@ -635,4 +635,97 @@ body {
         font-size: 2rem;
     }
 }
+/* past-achievements.css */
+
+/* Paleta de colores */
+/* Fondo: #1a1a2e (azul oscuro) */
+/* Primario: #e94560 (rojo brillante) */
+/* Secundario: #0f3460 (azul marino) */
+/* Texto: #eaeaea (gris claro) */
+
+/* Hero Section Styles */
+.hero-past-achievements {
+    background: url('images/hero-past-achievements.jpg') no-repeat center center/cover;
+    height: 300px;
+    position: relative;
+}
+
+.hero-past-achievements::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 26, 46, 0.8);
+}
+
+.hero-past-achievements .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-past-achievements h1 {
+    font-size: 3rem;
+    color: #eaeaea;
+}
+
+.hero-past-achievements p {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #e94560;
+    font-weight: 700;
+}
+
+/* Card Styles */
+.card {
+    background-color: #0f3460;
+    color: #eaeaea;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: #e94560;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #ccc;
+}
+
+.btn-primary {
+    background-color: #e94560;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #eaeaea;
+    color: #e94560;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #eaeaea;
+}
 
