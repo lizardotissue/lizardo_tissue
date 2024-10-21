@@ -1,8 +1,9 @@
-/* Estilos Globales */
+/* --- Estilos Globales --- */
 body {
-    background-color: #f9fafb;
+    background-color: #f0f2f5;
     color: #333;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -18,415 +19,432 @@ img {
     height: auto;
 }
 
-/* Tipografía */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-/* Paleta de Colores */
-/* 
-    -- Azul Oscuro: #0D1B2A
-    -- Azul Medio: #1B263B
-    -- Azul Claro: #415A77
-    -- Azul Muy Claro: #778DA9
-    -- Blanco: #F9FAFB
-    -- Acento: #E0E1DD
-*/
-
-/* Navbar */
+/* --- Navbar --- */
 .navbar {
-    background-color: #1B263B;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #0050B3;
 }
 
 .navbar .navbar-brand {
     font-size: 1.8rem;
-    font-weight: 700;
-    color: #E0E1DD;
+    font-weight: bold;
+    color: #fff;
 }
 
 .navbar .navbar-brand:hover {
-    color: #F9FAFB;
+    color: #FFD700;
 }
 
 .navbar .nav-link {
-    color: #E0E1DD;
-    margin-right: 1rem;
-    transition: color 0.3s;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
 }
 
 .navbar .nav-link:hover {
-    color: #F9FAFB;
+    color: #FFD700;
 }
 
 .navbar .dropdown-menu {
-    background-color: #1B263B;
+    background-color: #0050B3;
     border: none;
 }
 
 .navbar .dropdown-item {
-    color: #E0E1DD;
+    color: #fff;
 }
 
 .navbar .dropdown-item:hover {
-    background-color: #415A77;
-    color: #F9FAFB;
+    background-color: #FFD700;
+    color: #0050B3;
 }
 
 .navbar-toggler {
     border: none;
+    outline: none;
 }
 
 .navbar-toggler-icon {
     filter: invert(1);
 }
 
-/* Hero Section */
+/* --- Hero Section (Página Principal) --- */
 .hero {
-    background: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 0.8)), url('images/hero-background.jpg') no-repeat center center/cover;
-    color: #E0E1DD;
-    padding: 120px 0;
-    text-align: center;
+    background: linear-gradient(to right, #0050B3, #0062E6);
+    color: #fff;
+    padding: 100px 0;
+}
+
+.hero .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .hero-content {
+    max-width: 50%;
+}
+
+.hero .hero-image {
+    max-width: 40%;
 }
 
 .hero h1 {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 1rem;
 }
 
 .hero p {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
+    color: #ddd;
 }
 
 .hero .btn-custom {
-    background-color: #E0E1DD;
-    color: #1B263B;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: background-color 0.3s, color 0.3s;
+    border-color: #FFD700;
+    color: #FFD700;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hero .btn-custom:hover {
-    background-color: #778DA9;
-    color: #F9FAFB;
+    background-color: #FFD700;
+    color: #0050B3;
 }
 
-/* About Section */
+.hero-img {
+    width: 100%;
+    border-radius: 10px;
+    border: 4px solid #FFD700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-img:hover {
+    transform: scale(1.05);
+}
+
+/* --- About Section --- */
 #about {
     padding: 4rem 0;
-    background-color: #F9FAFB;
+    background: #fff;
 }
 
 #about .section-title {
-    font-size: 2.5rem;
-    color: #1B263B;
-    font-weight: 700;
     text-align: center;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
-    position: relative;
-}
-
-#about .section-title::after {
-    content: '';
-    width: 80px;
-    height: 4px;
-    background-color: #E0E1DD;
-    display: block;
-    margin: 0.5rem auto 0;
-    border-radius: 2px;
+    color: #0050B3;
+    font-weight: 700;
 }
 
 .about-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
 .about-card {
-    background-color: #FFFFFF;
+    background: #f0f2f5;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    flex: 1 1 calc(25% - 2rem);
-    max-width: calc(25% - 2rem);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .about-card .icon {
-    font-size: 3rem;
-    color: #1B263B;
+    font-size: 2.5rem;
+    color: #0062E6;
     margin-bottom: 1rem;
 }
 
 .about-card h3 {
     font-size: 1.5rem;
-    color: #1B263B;
     margin-bottom: 1rem;
-    font-weight: 600;
+    color: #0050B3;
 }
 
 .about-card p {
-    color: #555;
     font-size: 1rem;
+    color: #555;
     line-height: 1.6;
 }
 
 .about-card .highlight {
-    color: #415A77;
-    font-weight: 600;
+    color: #0062E6;
+    font-weight: bold;
 }
 
-/* Contact Section */
+/* --- Contact Section --- */
 #contact {
-    padding: 4rem 0;
-    background-color: #E0E1DD;
+    padding: 60px 0;
     text-align: center;
+    background-color: #f0f2f5;
+    color: #333;
 }
 
 #contact h2 {
     font-size: 2.5rem;
-    color: #1B263B;
     margin-bottom: 1rem;
-    font-weight: 700;
+    color: #0050B3;
 }
 
 #contact p {
     font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 2rem;
+    color: #555;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 30px;
+    margin-top: 30px;
 }
 
-.social-links a {
-    color: #1B263B;
-    font-size: 2.5rem;
-    transition: color 0.3s, transform 0.3s;
+.social-icon {
+    color: #0050B3;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 3rem;
 }
 
-.social-links a:hover {
-    color: #778DA9;
-    transform: scale(1.1);
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #FFD700;
 }
 
-/* Footer */
+/* --- Footer --- */
 .footer {
-    background-color: #1B263B;
-    color: #E0E1DD;
+    background-color: #003D80;
+    color: #ccc;
     text-align: center;
     padding: 1rem 0;
 }
 
 .footer p {
     margin: 0;
-    font-size: 0.9rem;
 }
 
-/* Hero Sections for Other Pages */
-.hero-section {
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero .hero-content,
+    .hero .hero-image {
+        max-width: 100%;
+    }
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Animaciones --- */
+.fade-in-left {
+    opacity: 0;
+    animation: fadeInLeft 1s forwards;
+}
+
+.fade-in-right {
+    opacity: 0;
+    animation: fadeInRight 1s forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* --- Past Achievements Page --- */
+.past-achievements .hero-past-achievements {
+    background: url('images/hero-past-achievements.jpg') no-repeat center center/cover;
+    height: 300px;
     position: relative;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 100px 0 80px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
-.hero-section::after {
+.past-achievements .hero-past-achievements::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(13, 27, 42, 0.7);
+    background: rgba(0, 80, 179, 0.7);
 }
 
-.hero-section .container {
+.past-achievements .hero-past-achievements .container {
     position: relative;
     z-index: 2;
-}
-
-.hero-section h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.hero-section p {
-    font-size: 1.25rem;
-    color: #E0E1DD;
-}
-
-/* Section Titles */
-.section-title {
-    font-size: 2.5rem;
-    color: #1B263B;
-    font-weight: 700;
     text-align: center;
+}
+
+.past-achievements .hero-past-achievements h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.past-achievements .hero-past-achievements p {
+    color: #eee;
+    font-size: 1.2rem;
+}
+
+.past-achievements .section-title {
+    text-align: center;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
-    position: relative;
+    color: #0050B3;
+    font-weight: 700;
 }
 
-.section-title::after {
-    content: '';
-    width: 80px;
-    height: 4px;
-    background-color: #E0E1DD;
-    display: block;
-    margin: 0.5rem auto 0;
-    border-radius: 2px;
-}
-
-/* Cards */
-.card {
+.past-achievements .card {
     border: none;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #FFFFFF;
+    background-color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+.past-achievements .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 80, 179, 0.2);
 }
 
-.card-img-top {
+.past-achievements .card-img-top {
     height: 200px;
     object-fit: cover;
 }
 
-.card-body {
-    padding: 1.5rem;
-}
-
-.card-title {
-    color: #1B263B;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-}
-
-.card-text {
-    color: #555;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.btn-custom {
-    background-color: #1B263B;
-    color: #FFFFFF;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-weight: 600;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-custom:hover {
-    background-color: #415A77;
-    color: #FFFFFF;
-}
-
-/* Teaching & Outreach */
-.teaching-outreach .hero-section {
-    background-image: url('images/hero-teaching.jpg');
-}
-
-.teaching-outreach .btn-custom {
-    background-color: #1B263B;
-}
-
-.teaching-outreach .btn-custom:hover {
-    background-color: #415A77;
-}
-
-/* Personal Notes */
-.personal-notes .hero-section {
-    background-image: url('images/hero-personal-notes.jpg');
-}
-
-.personal-notes .btn-custom {
-    background-color: #1B263B;
-}
-
-.personal-notes .btn-custom:hover {
-    background-color: #415A77;
-}
-
-/* Past Achievements */
-.past-achievements .hero-section {
-    background-image: url('images/hero-past-achievements.jpg');
-}
-
-.past-achievements .btn-custom {
-    background-color: #1B263B;
-}
-
-.past-achievements .btn-custom:hover {
-    background-color: #415A77;
-}
-
 .past-achievements .card-title {
-    font-size: 1.2rem;
+    color: #0050B3;
+    font-weight: bold;
 }
 
 .past-achievements .card-text {
-    font-size: 0.95rem;
+    color: #555;
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-    .about-card {
-        flex: 1 1 calc(50% - 2rem);
-        max-width: calc(50% - 2rem);
-    }
+.past-achievements .btn-custom {
+    background-color: #0050B3;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.past-achievements .btn-custom:hover {
+    background-color: #FFD700;
+    color: #0050B3;
 }
 
 @media (max-width: 768px) {
-    .hero h1, .hero-section h1 {
-        font-size: 2.5rem;
+    .past-achievements .hero-past-achievements {
+        height: 200px;
     }
-
-    .hero p, .hero-section p {
-        font-size: 1.1rem;
-    }
-
-    .about-card {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .section-title {
+    .past-achievements .hero-past-achievements h1 {
         font-size: 2rem;
     }
 }
 
-@media (max-width: 576px) {
-    .navbar .navbar-brand {
-        font-size: 1.5rem;
-    }
+/* --- Personal Notes Page --- */
+.personal-notes .hero-personal-notes {
+    background: url('images/hero-personal-notes.jpg') no-repeat center center/cover;
+    height: 300px;
+    position: relative;
+}
 
-    .social-links a {
+.personal-notes .hero-personal-notes::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 80, 179, 0.7);
+}
+
+.personal-notes .hero-personal-notes .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.personal-notes .hero-personal-notes h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.personal-notes .hero-personal-notes p {
+    color: #eee;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .personal-notes .hero-personal-notes {
+        height: 200px;
+    }
+    .personal-notes .hero-personal-notes h1 {
         font-size: 2rem;
     }
+}
 
-    .footer p {
-        font-size: 0.8rem;
+/* --- Teaching & Outreach Page --- */
+.teaching-outreach .hero-teaching {
+    background: url('images/hero-teaching.jpg') no-repeat center center/cover;
+    height: 300px;
+    position: relative;
+}
+
+.teaching-outreach .hero-teaching::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 80, 179, 0.7);
+}
+
+.teaching-outreach .hero-teaching .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.teaching-outreach .hero-teaching h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.teaching-outreach .hero-teaching p {
+    color: #eee;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .teaching-outreach .hero-teaching {
+        height: 200px;
+    }
+    .teaching-outreach .hero-teaching h1 {
+        font-size: 2rem;
     }
 }
