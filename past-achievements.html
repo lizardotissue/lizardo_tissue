@@ -8,23 +8,64 @@
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos Personalizados -->
-    <link rel="stylesheet" href="past-achievements.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome para Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS CSS -->
+    <!-- AOS CSS para animaciones -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <!-- ... (mismo código de navbar que en index.html) ... -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Lizardo Torres</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavSub" aria-controls="navbarNavSub" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavSub">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Menú de navegación -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About Me</a>
+                    </li>
+                    <!-- Research & Projects Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="projectsDropdownSub" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Research & Projects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="projectsDropdownSub">
+                            <li><a class="dropdown-item" href="https://your-current-projects.com" target="_blank">Active Research</a></li>
+                            <li><a class="dropdown-item" href="https://your-collaborative-projects.com" target="_blank">Collaborative Studies</a></li>
+                            <li><a class="dropdown-item active" href="past-achievements.html">Past Achievements</a></li>
+                        </ul>
+                    </li>
+                    <!-- Insights & Resources Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdownSub" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Insights & Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="resourcesDropdownSub">
+                            <li><a class="dropdown-item" href="personal-notes.html">Personal Notes</a></li>
+                            <li><a class="dropdown-item" href="lectures-talks.html">Lectures & Talks</a></li>
+                            <li><a class="dropdown-item" href="scientific-resources.html">Scientific Resources</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="teaching-outreach.html">Teaching & Outreach</a></li>
+                        </ul>
+                    </li>
+                    <!-- Get in Touch -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Get in Touch</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero Section de Past Achievements -->
     <section class="hero-past-achievements d-flex align-items-center">
         <div class="container text-center">
-            <h1 class="display-4 text-white">Past Achievements</h1>
-            <p class="lead text-white-50">A journey through my publications and completed projects</p>
+            <h1 class="display-4">Past Achievements</h1>
+            <p class="lead">A journey through my publications and completed projects</p>
         </div>
     </section>
 
@@ -35,13 +76,13 @@
             <h2 class="section-title">Publications</h2>
             <div class="row">
                 <!-- Tarjeta de Publicación 1 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="card publication-card mb-4">
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="card h-100">
                         <img src="images/paper1.jpg" class="card-img-top" alt="Paper Title 1">
                         <div class="card-body">
-                            <h5 class="card-title">Título del Artículo 1</h5>
-                            <p class="card-text">Breve descripción del artículo publicado, destacando los puntos clave y los resultados obtenidos.</p>
-                            <a href="https://link-to-your-paper-1.com" target="_blank" class="btn btn-primary">Read Paper</a>
+                            <h5 class="card-title">Title of Paper 1</h5>
+                            <p class="card-text">Brief description of the published paper, highlighting key points and findings.</p>
+                            <a href="https://link-to-your-paper-1.com" target="_blank" class="btn btn-custom">Read Paper</a>
                         </div>
                     </div>
                 </div>
@@ -55,14 +96,13 @@
             <h2 class="section-title">Completed Projects</h2>
             <div class="row">
                 <!-- Tarjeta de Proyecto 1 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="card project-card mb-4">
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="card h-100">
                         <img src="images/project1.jpg" class="card-img-top" alt="Project Title 1">
                         <div class="card-body">
-                            <h5 class="card-title">Título del Proyecto 1</h5>
-                            <p class="card-text">Descripción del proyecto, explicando su propósito, metodología y aprendizajes obtenidos.</p>
-                            <!-- Si tienes un enlace al proyecto o a más información -->
-                            <a href="https://link-to-your-project-1.com" target="_blank" class="btn btn-primary">View Project</a>
+                            <h5 class="card-title">Title of Project 1</h5>
+                            <p class="card-text">Description of the project, explaining its purpose, methodology, and learnings.</p>
+                            <a href="https://link-to-your-project-1.com" target="_blank" class="btn btn-custom">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +113,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto">
+    <footer class="footer mt-auto py-3 bg-light">
         <div class="container text-center">
             <p>&copy; 2024 Lizardo Torres. All rights reserved.</p>
         </div>
@@ -85,9 +125,10 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1000, // duración de las animaciones en milisegundos
-            once: true, // si la animación debe ocurrir solo una vez
+            duration: 800,
+            once: true,
         });
     </script>
 </body>
 </html>
+
