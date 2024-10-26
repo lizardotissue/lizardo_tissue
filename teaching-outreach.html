@@ -68,7 +68,7 @@
     </section>
 
     
-   <!-- Contenido Principal -->
+  <!-- Contenido Principal -->
 <main class="container my-5">
     <!-- Sección de Enseñanza -->
     <section class="my-5">
@@ -206,8 +206,7 @@
                             <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#fabcoreCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden```html
+                            <span class="carousel-control-next-icon"```html
                         </button>
                     </div>
                     <div class="card-body">
@@ -228,12 +227,18 @@
     </section>
 </main>
 
-<!-- CSS para ocultar el cuadro de descripción al pasar el mouse -->
-<style>
-    .carousel-item:hover .carousel-caption {
-        display: none;
-    }
-</style>
+<!-- JavaScript para ocultar la descripción al pasar el mouse -->
+<script>
+    document.querySelectorAll('.carousel-item').forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.querySelector('.carousel-caption').style.display = 'none';
+        });
+        item.addEventListener('mouseleave', function() {
+            this.querySelector('.carousel-caption').style.display = 'block';
+        });
+    });
+</script>
+
 
         <!-- Sección de Mentoring & Judging -->
         <section class="my-5">
